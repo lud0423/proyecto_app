@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.pagupa.notiapp.ui.logout.LogoutFragment"
+        android:label="@string/menu_order"
+        tools:layout="@layout/fragment_logout" />
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.pagupa.notiapp.ui.order.OrderFragment"
+        android:label="@string/menu_order"
+        tools:layout="@layout/fragment_order" />
+
+    <fragment
+        android:id="@+id/nav_create"
+        android:name="com.pagupa.notiapp.ui.createorder.CreateOrderFragment"
+        android:label="Crear Orden"
+        tools:layout="@layout/fragment_order_create" />
+
+    <fragment
+        android:id="@+id/nav_order_detail"
+        android:name="com.pagupa.notiapp.ui.detailorder.DetailOrderFragment"
+        android:label="@string/menu_order_detail"
+        tools:layout="@layout/fragment_order_detail" />
+
+    <fragment
+        android:id="@+id/nav_order_update"
+        android:name="com.pagupa.notiapp.ui.updateorder.UpdateOrderFragment"
+        android:label="@string/menu_order_update"
+        tools:layout="@layout/fragment_order_update" />
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.pagupa.notiapp.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.pagupa.notiapp.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+</navigation>

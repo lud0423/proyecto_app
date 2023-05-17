@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#bbb">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:gravity="end"
+        android:background="#ddd">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+            <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Volver"
+            android:src="@drawable/regresar"
+            android:id="@+id/cancel"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:background="#aaa"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_margin="5dp">
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="Limpiar"
+                android:src="@drawable/limpiar"
+                android:id="@+id/clear"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                android:layout_marginRight="10dp"
+                android:background="#ccc"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="Guardar"
+                android:src="@drawable/guardar"
+                android:id="@+id/getsign"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:layout_marginRight="10dp"
+                android:background="#ccc"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TableLayout android:layout_height="wrap_content"
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp">
+        <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:text="Nombre: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content" android:paddingLeft="10sp"
+                android:layout_gravity="right"
+                android:paddingTop="10dp"/>
+            <EditText
+                android:layout_height="wrap_content"
+                android:id="@+id/yourName"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:maxLength="30">
+                <requestFocus />
+            </EditText>
+        </TableRow>
+        <TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:text="" android:maxLength="30"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:text="Firma en la parte inferior ..." android:maxLength="30"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content" />
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#ddd"/>
+</LinearLayout>

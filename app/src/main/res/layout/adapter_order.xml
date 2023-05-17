@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/idAdapterCardView"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="20px"
+        app:cardCornerRadius="20px">
+
+        <LinearLayout
+            android:id="@+id/idAdapterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10px"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:weightSum="1.0"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginStart="10dp">
+                            <LinearLayout
+                                android:id="@+id/idAdapterLayputPriorityColor"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/normal"
+                                android:orientation="horizontal">
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="Orden N°: "
+                            android:textStyle="italic"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="5dp"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/idAdapterOrderSequence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:text=" 0000000 "
+                        android:textStyle="italic|bold"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:weightSum="1.0"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Fecha: "
+                        android:textStyle="italic"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:gravity="end"/>
+                    <TextView
+                        android:id="@+id/idAdapterOrderDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:text=" 01/06/2022 "
+                        android:textStyle="italic|bold"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#000"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="Cliente:  "
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    android:gravity="end"/>
+                <TextView
+                    android:id="@+id/idAdapterOrderClient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text=""
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1.0"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="Lugar°:  "
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.8"
+                    android:gravity="end"/>
+                <TextView
+                    android:id="@+id/idAdapterOrderPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text=""
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1.0"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="Asignación: "
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.75"
+                    android:gravity="end"/>
+                <EditText
+                    android:id="@+id/idAdapterOrderAssignment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text|textMultiLine"
+                    android:textSize="14dp"
+                    android:gravity="top"
+                    android:text=""
+                    android:layout_weight="0.25"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:weightSum="2.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Activar:"
+                        android:textColor="@color/black"/>
+                    <ImageButton
+                        android:id="@+id/idAdapterBtnRunOrden"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/working"
+                        android:padding="10dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="end">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Estado: "
+                        android:textStyle="italic"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="5dp">
+                        <LinearLayout
+                            android:id="@+id/idAdapterStateColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/idAdapterStateText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="   GENERADA   "
+                                android:textStyle="italic|bold"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

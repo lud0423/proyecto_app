@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "825270092767",
+    "firebase_url": "https://mantenimientos-6a72e-default-rtdb.firebaseio.com",
+    "project_id": "mantenimientos-6a72e",
+    "storage_bucket": "mantenimientos-6a72e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825270092767:android:eb93bd57234818e3aefa6a",
+        "android_client_info": {
+          "package_name": "com.pagupa.notiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825270092767-as4vostq9medj425i0p55mlqf5pmfseb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyGzs5xY_vras_dOQqcaIEe2cJbgW-xho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825270092767-as4vostq9medj425i0p55mlqf5pmfseb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

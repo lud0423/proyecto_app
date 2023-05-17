@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#344444">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10px"
+            app:cardCornerRadius="10px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:padding="10px"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:weightSum="1.0">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18dp"
+                            android:fontFamily="@font/archivo_bold"
+                            android:text="Describe la Nueva Orden"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#000"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1.0"
+                    android:paddingStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/archivo_bold"
+                        android:gravity="start"
+                        android:text="Orden:  "
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+                    <Spinner
+                        android:id="@+id/idOrderCreateTypeOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:spinnerMode="dropdown"
+                        android:entries="@array/array_types"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1.0"
+                    android:paddingStart="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Prioridad:  "
+                        android:fontFamily="@font/archivo_bold"
+                        android:textColor="@color/black"
+                        android:layout_weight="0.75"
+                        android:gravity="start"/>
+                    <Spinner
+                        android:id="@+id/idOrderCreatePriority"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:spinnerMode="dropdown"
+                        android:entries="@array/array_priorities"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0"
+                    android:paddingStart="15dp"
+                    android:layout_marginTop="40px"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="46dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.15"
+                        android:fontFamily="@font/archivo_bold"
+                        android:text="Cliente:  "
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+                    <AutoCompleteTextView
+                        android:id="@+id/idOrderCreateCliente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:textStyle="italic"
+                        android:textColor="@color/black"
+                        android:layout_weight="0.80"/>
+                    <ImageButton
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/add"
+                        android:visibility="gone"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1.0"
+                    android:paddingStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="156dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/archivo_bold"
+                        android:gravity="start"
+                        android:text="Lugar:  "
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/idOrdenCreatePlace"
+                        android:layout_width="309dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="italic|bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/idOrdenCreateBtnTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1.0"
+                    android:paddingStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="49dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.15"
+                        android:fontFamily="@font/archivo_bold"
+                        android:gravity="start"
+                        android:text="Tipo: "
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+                    <EditText
+                        android:id="@+id/idOrdenCreateType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textMultiLine|none"
+                        android:textSize="14dp"
+                        android:gravity="top"
+                        android:text=""
+                        android:layout_weight="0.85"/>
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textSize="30sp"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text=">"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/idOrdenCreateBtnTipo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1.0"
+                    android:paddingStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="49dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.15"
+                        android:fontFamily="@font/archivo_bold"
+                        android:gravity="start"
+                        android:text="Equipos:  "
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+                    <EditText
+                        android:id="@+id/idOrdenCreateEquipment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textMultiLine|none"
+                        android:textSize="14dp"
+                        android:gravity="top"
+                        android:text=""
+                        android:layout_weight="0.85"/>
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="30sp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text=">"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1.0"
+                    android:paddingStart="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Asignación:  "
+                        android:fontFamily="@font/archivo_bold"
+                        android:textColor="@color/black"
+                        android:layout_weight="0.75"
+                        android:gravity="start"/>
+                    <EditText
+                        android:id="@+id/idOrdenCreateAssignment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textMultiLine|none"
+                        android:textSize="14dp"
+                        android:gravity="top"
+                        android:text=""
+                        android:layout_weight="0.25"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1.0"
+                    android:paddingStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.15"
+                        android:fontFamily="@font/archivo_bold"
+                        android:gravity="start"
+                        android:text="Tecnicos:  "
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/idOrdenCreateResponsable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textMultiLine|none"
+                        android:textSize="14dp"
+                        android:gravity="top"
+                        android:text=""
+                        android:layout_weight="0.85"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+                            <ImageButton
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/add"
+                                android:layout_weight="0.05"/>
+                        </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1.0"
+                    android:paddingStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/archivo_bold"
+                        android:gravity="start"
+                        android:text="Logistica:  "
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/idOrdenCreateLigistic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textMultiLine|none"
+                        android:textSize="14dp"
+                        android:gravity="top"
+                        android:text=""
+                        android:layout_weight="0.25"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:paddingRight="20dp">
+
+                    <Button
+                        android:id="@+id/idOrdenCreateBtnGuardar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" GUARDAR "
+                        android:textStyle="bold"
+                        app:backgroundTint="#35A5FD" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/idCrearOrdenTipoCardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Agregue una descripción de Tipo Orden"
+                    android:gravity="center_horizontal"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic"
+                    android:textColor="#000"
+                    android:layout_marginBottom="30dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0"
+                    android:layout_marginBottom="20dp">
+                    <EditText
+                        android:id="@+id/idCrearTipoTxtEscribir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Escriba un tipo"
+                        android:layout_weight="0.2"/>
+                    <Button
+                        android:id="@+id/idCrearTipoBtnAgregar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:background="@drawable/add"
+                        android:layout_weight="0.8"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp">
+
+                    <EditText
+                        android:id="@+id/idCrearTipoTxtLista"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="#ddd"
+                        android:gravity="top"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/idCrearTipoBtnAceptar"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/boton_aceptar"
+                    android:layout_gravity="end"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/idCrearOrdenEquipoCardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Agregue Equipos"
+                    android:gravity="center_horizontal"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic"
+                    android:textColor="#000"
+                    android:layout_marginBottom="30dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0"
+                    android:layout_marginBottom="20dp">
+                    <EditText
+                        android:id="@+id/idCrearEquipoTxtCantidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:gravity="end"
+                        android:layout_weight="0.45"/>
+                    <AutoCompleteTextView
+                        android:id="@+id/idCrearEquipoTxtEscribir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Escriba un Equipo"
+                        android:layout_weight="0.13"/>
+                    <Button
+                        android:id="@+id/idCrearEquipoBtnAgregar"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/add"
+                        android:layout_weight="0.42"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp">
+
+                    <EditText
+                        android:id="@+id/idCrearEquipoTxtLista"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="#ddd"
+                        android:gravity="top"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/idCrearEquipoBtnAceptar"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/boton_aceptar"
+                    android:layout_gravity="end"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>
