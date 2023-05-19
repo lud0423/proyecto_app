@@ -22,7 +22,11 @@
         android:name="com.pagupa.notiapp.ui.createorder.CreateOrderFragment"
         android:label="Crear Orden"
         tools:layout="@layout/fragment_order_create" />
-
+    <fragment
+        android:id="@+id/nav_menu"
+        android:name="com.pagupa.notiapp.ui.menu.menu_principal"
+        android:label="menu"
+        tools:layout="@layout/fragment_menu_principal" />
     <fragment
         android:id="@+id/nav_order_detail"
         android:name="com.pagupa.notiapp.ui.detailorder.DetailOrderFragment"

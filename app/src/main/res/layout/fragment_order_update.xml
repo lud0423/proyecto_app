@@ -34,9 +34,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="14dp"
+                        android:textSize="15dp"
                         android:text="Orden N°: "
-                        android:textStyle="italic"
+                        android:fontFamily="@font/archivo_bold"
                         android:textColor="@color/black"/>
                     <TextView
                         android:id="@+id/idUpdateOrderNumber"
@@ -44,7 +44,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18dp"
                         android:text=" 0000000 "
-                        android:textStyle="italic|bold"
+                        android:textStyle=""
                         android:textColor="@color/black"
                         android:layout_weight="1"/>
                 </LinearLayout>
@@ -59,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="14dp"
                         android:text="Fecha: "
-                        android:textStyle="italic"
+                        android:fontFamily="@font/archivo_bold"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:gravity="end"/>
@@ -89,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:text="Prioridad:  "
-                    android:textStyle="italic"
+                    android:fontFamily="@font/archivo_bold"
                     android:textColor="@color/black"
                     android:gravity="end"/>
                 <TextView
@@ -121,9 +121,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:text="Cliente:  "
-                    android:textStyle="italic"
+                    android:fontFamily="@font/archivo_bold"
                     android:textColor="@color/black"
                     android:gravity="end"/>
                 <TextView
@@ -148,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:text="  Lugar:  "
-                    android:textStyle="italic"
+                    android:fontFamily="@font/archivo_bold"
                     android:textColor="@color/black"
                     android:gravity="end"/>
                 <TextView
@@ -201,23 +201,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:background="#56abff">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16dp"
+                        android:fontFamily="@font/archivo_bold"
                         android:text="    Observaciones:  "
-                        android:textStyle="italic"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
                     <EditText
                         android:id="@+id/idUpdateOrderObservation"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:inputType="text|textMultiLine"
-                        android:background="#ddd"
-                        android:textSize="16dp"
+                        android:layout_weight="0.25"
+                        android:background="#F5F2E1"
                         android:gravity="top"
+                        android:inputType="text|textMultiLine"
                         android:padding="10dp"
-                        android:layout_weight="0.25"/>
+                        android:textSize="16dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
             <LinearLayout
@@ -274,14 +276,15 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp">
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18dp"
+                    android:layout_height="30dp"
+                    android:gravity="end"
                     android:text="Resultado: "
-                    android:textStyle="italic"
                     android:textColor="@color/black"
-                    android:gravity="end"/>
+                    android:textSize="18dp"
+                    android:fontFamily="@font/archivo_bold" />
                 <Spinner
                     android:id="@+id/idUpdateResult"
                     android:layout_width="wrap_content"
@@ -298,7 +301,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:text="Estatus: "
-                    android:textStyle="italic"
+                    android:fontFamily="@font/archivo_bold"
                     android:textColor="@color/black"
                     android:layout_weight="0.75"
                     android:gravity="end"

@@ -71,7 +71,7 @@ public class CreateOrderFragment extends Fragment {
     List<Detalle> detalleList=new ArrayList<>();
     List<Responsable> responsableList=new ArrayList<>();
 
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)  {
         binding = FragmentOrderCreateBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
@@ -115,8 +115,20 @@ public class CreateOrderFragment extends Fragment {
         txtLogistica=binding.idOrdenCreateLigistic;
 
 
+
+
         txtTipo.setKeyListener(null);
         txtEquipo.setKeyListener(null);
+        //esto es una prueba para verificar que se oculte la linea del txt
+        //hacemos uso de focus listener
+        txtCliente.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+
+            }
+
+        }); //esto es una prueba para verificar que se oculte la linea del txt
+        //aqui termina
 
         btnAbrirTipo.setOnClickListener(new View.OnClickListener() {
             @Override

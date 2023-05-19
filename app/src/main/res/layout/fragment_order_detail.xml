@@ -18,58 +18,75 @@
                 android:padding="10px"
                 android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="394dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="5dp">
+
+
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical|right"
+                    android:layout_width="191dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical|start"
                     android:orientation="horizontal"
-                    android:paddingRight="5dp">
-                    <LinearLayout
+                    android:paddingTop="10dp">
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical|end"
-                        android:layout_marginEnd="10dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14dp"
-                            android:text="     Orden N°: "
-                            android:textStyle="italic"
-                            android:textColor="@color/black"/>
-                        <TextView
-                            android:id="@+id/idDetailOrderNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18sp"
-                            android:text=" 0000000 "
-                            android:textStyle="italic|bold"
-                            android:textColor="@color/black"/>
-                        </LinearLayout>
+                        android:fontFamily="@font/archivo_bold"
+                        android:gravity="start"
+                        android:text="     Orden N°: "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="" />
 
-                        <ImageButton
-                            android:id="@+id/idDetailOrdenGoUpdate"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:textStyle="bold"
-                            android:scaleType="fitXY"
-                            android:padding="5dp"
-                            android:layout_marginRight="4dp"
-                            android:background="#A0C0F8"
-                            android:src="@drawable/edit" />
+                    <TextView
+                        android:id="@+id/idDetailOrderNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/archivo_bold"
+                        android:text=" 0000000 "
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="195dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical|end"
+                    android:orientation="horizontal"
+                    android:paddingEnd="10dp">
+
+                    <ImageButton
+                        android:id="@+id/idDetailOrdenGoUpdate"
+                        android:layout_width="40dp"
+                        android:layout_height="42dp"
+                        android:layout_marginRight="4dp"
+                        android:background="#A0C0F8"
+                        android:padding="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit"
+                        android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/idDetailOrdenGoDelete"
                         android:layout_width="40dp"
                         android:layout_height="52dp"
-                        android:textStyle="bold"
-                        android:padding="0dp"
                         android:backgroundTint="#C81912"
+                        android:padding="0dp"
                         android:text="X"
+                        android:textColor="#fff"
                         android:textSize="18sp"
-                        android:textColor="#fff"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
-                <LinearLayout
+
+            </LinearLayout>
+
+            <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="2px"
                     android:background="#000"></LinearLayout>
@@ -86,9 +103,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="18sp"
+                            android:textSize="16sp"
                             android:text="Prioridad:  "
-                            android:textStyle="italic"
+                            android:textStyle=""
+                            android:fontFamily="@font/archivo_bold"
                             android:textColor="@color/black"
                             android:gravity="end"/>
                         <TextView
@@ -120,19 +138,21 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
+                            android:textSize="20sp"
                             android:text="Cliente:  "
-                            android:textStyle="italic"
+                            android:fontFamily="@font/archivo_bold"
                             android:textColor="@color/black"
                             android:gravity="end"/>
+
                         <TextView
                             android:id="@+id/idDetailOrderClient"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="18sp"
+                            android:fontFamily="@font/archivo_bold"
                             android:gravity="center_horizontal"
-                            android:textStyle="italic|bold"
-                            android:textColor="@color/black"/>
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="normal" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -145,24 +165,28 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_weight="1.0">
+                            android:layout_weight="1.0"
+                            android:orientation="horizontal">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="18sp"
+                                android:fontFamily="@font/archivo_bold"
+                                android:gravity="end"
                                 android:text="Lugar:  "
-                                android:textStyle="italic"
                                 android:textColor="@color/black"
-                                android:gravity="end"/>
+                                android:textSize="18sp"
+                                android:textStyle="normal" />
+
                             <TextView
                                 android:id="@+id/idDetailOrderPlace"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/black"
                                 android:textSize="18sp"
-                                android:textStyle="italic|bold"
-                                android:textColor="@color/black"/>
+                                android:textStyle="italic|bold" />
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -172,9 +196,10 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="14dp"
+                                android:textSize="18dp"
                                 android:text="Fecha: "
-                                android:textStyle="italic"
+                                android:textStyle=""
+                                android:fontFamily="@font/archivo_bold"
                                 android:textColor="@color/black"
                                 android:gravity="end"/>
                             <TextView
@@ -183,7 +208,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="18sp"
                                 android:text=" 01/06/2022  "
-                                android:textStyle="italic|bold"
+                                android:textStyle=""
                                 android:textColor="@color/black" />
                         </LinearLayout>
                     </LinearLayout>
@@ -197,7 +222,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="18sp"
                             android:text="Fecha Finalización: "
-                            android:textStyle="italic"
+                            android:textStyle=""
                             android:textColor="@color/black"
                             android:gravity="end"/>
                         <TextView
@@ -225,7 +250,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="18sp"
                                 android:text="Result: "
-                                android:textStyle="italic"
+
                                 android:textColor="@color/black"
                                 android:gravity="end"/>
                             <TextView
@@ -236,27 +261,29 @@
                                 android:textStyle="italic|bold"
                                 android:textColor="@color/black" />
                         </LinearLayout>
+
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="337dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="end"
                             android:layout_marginTop="5dp"
-                            android:layout_weight="0.8">
+                            android:layout_weight="0.8"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="18sp"
+                                android:gravity="end"
                                 android:text="Estatus: "
-                                android:textStyle="italic"
                                 android:textColor="@color/black"
-                                android:gravity="end"/>
+                                android:textSize="18sp" />
+
                             <TextView
                                 android:id="@+id/idDetailOrderStatus"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="18sp"
-                                android:textColor="@color/black" />
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
                         </LinearLayout>
                     </LinearLayout>
                     <androidx.cardview.widget.CardView
@@ -270,13 +297,13 @@
                             android:orientation="vertical"
                             android:gravity="left"
                             android:padding="5dp"
-                            android:background="#DFDFE1">
+                            android:background="#FAF3DD">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="18sp"
                                 android:text="Tipo:  "
-                                android:textStyle="italic"
+                                android:fontFamily="@font/archivo_bold"
                                 android:textColor="@color/black"
                                 android:layout_weight="0.75"
                                 android:gravity="end"/>
@@ -301,13 +328,13 @@
                             android:orientation="vertical"
                             android:gravity="left"
                             android:padding="5dp"
-                            android:background="#D3D3D5">
+                            android:background="#FAF3DD">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="18sp"
                                 android:text="Equipos:  "
-                                android:textStyle="italic"
+                                android:fontFamily="@font/archivo_bold"
                                 android:textColor="@color/black"
                                 android:layout_weight="0.75"
                                 android:gravity="end"/>
@@ -331,13 +358,13 @@
                             android:orientation="vertical"
                             android:gravity="left"
                             android:padding="5dp"
-                            android:background="#DFDFE1">
+                            android:background="#FAF3DD">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="18sp"
                                 android:text="Asignación:  "
-                                android:textStyle="italic"
+                                android:fontFamily="@font/archivo_bold"
                                 android:textColor="@color/black"
                                 android:gravity="end"/>
                             <EditText
@@ -360,13 +387,13 @@
                         android:orientation="vertical"
                         android:gravity="left"
                         android:padding="5dp"
-                        android:background="#D3D3D5">
+                        android:background="#FAF3DD">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="18sp"
                             android:text="Técnicos:  "
-                            android:textStyle="italic"
+                            android:fontFamily="@font/archivo_bold"
                             android:textColor="@color/black"
                             android:gravity="end"/>
                         <EditText
@@ -389,13 +416,13 @@
                         android:orientation="vertical"
                         android:gravity="left"
                         android:padding="5dp"
-                        android:background="#DFDFE1">
+                        android:background="#FAF3DD">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="18sp"
                             android:text="Logística:  "
-                            android:textStyle="italic"
+                            android:fontFamily="@font/archivo_bold"
                             android:textColor="@color/black"
                             android:layout_weight="0.75"
                             android:gravity="end"/>
@@ -412,19 +439,22 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="5dp"
-                        android:layout_margin="5dp">
+                        android:layout_marginTop="5dp">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:background="#D3D3D5">
+                            android:background="#E3F2FD">
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
-                                android:text="    Observaciones:  "
-                                android:textStyle="italic"
-                                android:textColor="@color/black"/>
+                                android:text="Observaciones:  "
+                                android:textAlignment="center"
+                                android:background="@color/blue"
+                                android:fontFamily="@font/archivo_bold"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"/>
                             <EditText
                                 android:id="@+id/idDetailOrderObservation"
                                 android:layout_width="match_parent"
